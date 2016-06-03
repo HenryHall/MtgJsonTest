@@ -2,7 +2,6 @@ $(document).ready(function() {
   $.ajax({
    type: 'GET',
     url: 'AllSets.json',
-    async: false,
     jsonpCallback: 'jsonCallback',
     contentType: "application/json",
     dataType: 'jsonp',
