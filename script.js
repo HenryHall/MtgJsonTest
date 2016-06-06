@@ -56,7 +56,7 @@ $(document).ready(function() {
       success: function(data) {
         console.log('In Success');
         cardLibrary = data;
-        function() {
+  
           for (var i in cardLibrary) {
             if (cardLibrary[i].name = searchQuery) {
               console.log(cardLibrary[i]);
@@ -64,7 +64,7 @@ $(document).ready(function() {
               console.log("fail in AllCards.");
             }
           }
-        }
+
       },
       error: function(e) {
          console.log(e.message);
