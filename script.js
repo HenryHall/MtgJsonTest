@@ -26,19 +26,18 @@ $(document).ready(function() {
       success: function(data) {
         console.log('In Success');
         cardLibrary = data;
+        // for (var i in cardLibrary) {
+        //   if (cardLibrary[i].name = searchQuery) {
+        //     console.log(cardLibrary[i].name);
+        //   } else {
+        //     console.log("fail in AllCards.");
+        //   }
+        // }
       },
       error: function(e) {
          console.log(e.message);
       }
     });
-
-    for (var i in cardLibrary) {
-      if (cardLibrary[i].name = searchQuery) {
-        console.log(cardLibrary[i]);
-      } else {
-        console.log("fail in AllCards.");
-      }
-    }
 
   });
 
@@ -62,6 +61,7 @@ $(document).ready(function() {
               console.log(cardLibrary[i].name);
             } else {
               console.log("fail in AllCards.");
+              console.log(cardLibrary[i].name);
             }
           }
 
