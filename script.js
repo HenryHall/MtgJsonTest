@@ -55,6 +55,7 @@ $(document).ready(function() {
       dataType: 'json',
       success: function(data) {
         console.log('In Success');
+        cardLibrary = data;
         function() {
           for (var i in cardLibrary) {
             if (cardLibrary[i].name = searchQuery) {
