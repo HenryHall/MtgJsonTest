@@ -57,11 +57,11 @@ $(document).ready(function() {
         cardLibrary = data;
 
           for (var i in cardLibrary) {
-            if (cardLibrary[i].name = searchQuery) {
-              console.log(cardLibrary[i].name);
+            if (cardLibrary.name = searchQuery) {
+              console.log(cardLibrary.name);
             } else {
               console.log("fail in AllCards.");
-              console.log(cardLibrary[i].name);
+              console.log(cardLibrary.name);
             }
           }
 
