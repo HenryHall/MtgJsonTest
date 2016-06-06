@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
   $('#searchSets').click(function(){
-    var searchQuery = this.innerHTML;
+    var searchQuery = $('setName').innerHTML;
     var cardLibrary;
     console.log(searchQuery);
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
   });
 
   $('#searchCards').click(function(){
-    var searchQuery = this.innerHTML;
+    var searchQuery = $('cardName').innerHTML;
     var cardLibrary;
     console.log(searchQuery);
 
