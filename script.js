@@ -56,12 +56,12 @@ $(document).ready(function() {
         console.log('In Success');
         cardLibrary = data;
 
-          for (var i in cardLibrary) {
-            if (cardLibrary.name = searchQuery) {
-              console.log(cardLibrary.name);
+          for (var i = 0; i < cardLibrary.length; i++) {
+            if (cardLibrary[i] = searchQuery) {
+              console.log(cardLibrary[i]);
             } else {
               console.log("fail in AllCards.");
-              console.log(cardLibrary.name);
+              console.log(cardLibrary[i]);
             }
           }
 
