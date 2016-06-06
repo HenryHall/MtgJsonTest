@@ -25,7 +25,6 @@ $(document).ready(function() {
       dataType: 'json',
       success: function(data) {
         console.log('In Success');
-        console.log(data);
         cardLibrary = data;
       },
       error: function(e) {
@@ -36,6 +35,8 @@ $(document).ready(function() {
     for (var i in cardLibrary) {
       if (cardLibrary[i].name = searchQuery) {
         console.log(cardLibrary[i]);
+      } else {
+        console.log("fail in AllCards.");
       }
     }
 
@@ -54,7 +55,6 @@ $(document).ready(function() {
       dataType: 'json',
       success: function(data) {
         console.log('In Success');
-        console.log(data);
         cardLibrary = data;
       },
       error: function(e) {
@@ -65,6 +65,8 @@ $(document).ready(function() {
     for (var i in cardLibrary) {
       if (cardLibrary[i].name = searchQuery) {
         console.log(cardLibrary[i]);
+      } else {
+        console.log("fail in AllCards.");
       }
     }
 
