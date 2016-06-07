@@ -13,26 +13,23 @@ $(document).ready(function() {
 
 
   $('#searchSets').click(function(){
-    var searchQuery = $('#setName').innerHTML;
+    var searchQuery = $('#setName').val();
     var cardLibrary;
     console.log(searchQuery);
 
     $.ajax({
      type: 'GET',
-      url: 'JSon/AllSets.json',
-      jsonpCallback: 'jsonCallback',
-      contentType: "application/json",
+      url: 'https://raw.githubusercontent.com/HenryHall/MtgJsonTest/gh-pages/JSon/AllSets.json',
       dataType: 'json',
       success: function(data) {
         console.log('In Success');
         cardLibrary = data;
-        // for (var i in cardLibrary) {
-        //   if (cardLibrary[i].name = searchQuery) {
-        //     console.log(cardLibrary[i].name);
-        //   } else {
-        //     console.log("fail in AllCards.");
-        //   }
-        // }
+          for (var i  in cardLibrary) {
+          if (i == searchQuery) {
+              console.log("found at: " + i);
+              console.log(cardLibrary[i]);
+          }
+        }
       },
       error: function(e) {
          console.log(e.message);
@@ -42,28 +39,25 @@ $(document).ready(function() {
   });
 
   $('#searchCards').click(function(){
-    var searchQuery = $('#cardName').innerHTML;
+    var searchQuery = $('#cardName').val();
     var cardLibrary;
     console.log(searchQuery);
 
     $.ajax({
      type: 'GET',
-      url: 'JSon/AllCards.json',
-      jsonpCallback: 'jsonCallback',
-      contentType: "application/json",
+      url: 'https://raw.githubusercontent.com/HenryHall/MtgJsonTest/gh-pages/JSon/AllCards.json',
       dataType: 'json',
       success: function(data) {
         console.log('In Success');
         cardLibrary = data;
-
-          for (var i = 0; i < cardLibrary.length; i++) {
-            if (cardLibrary[i].name = searchQuery) {
+        for (var i  in cardLibrary) {
+          if (i == searchQuery) {
+              console.log("found at: " + i);
               console.log(cardLibrary[i]);
-            } else {
-              console.log("fail in AllCards.");
-              console.log("at card: " + cardLibrary[i].name);
-            }
+              // createCard();
           }
+        }
+
 
       },
       error: function(e) {
